@@ -1,0 +1,226 @@
+html, body {overflow:hidden;}
+
+body { background-image: url(pic/background29.png);
+	   background-repeat: repeat;
+}
+	   
+ * {
+    margin: 0;
+    padding: 0;
+   }
+
+/*===============================*/
+.zero {
+	width: 99vw;
+	height: 1vh;
+	border: 1px solid transparent;
+	background: transparent;
+	
+}
+
+.field {
+	width: 100vw;
+	height: 97vh;
+	border: 1px solid transparent;
+	
+}
+
+#fieldOne {
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+	
+/*===============================*/
+
+
+#alphabet {
+    width: 80vw;
+	height: 92vh;
+    border: 1px solid transparent;
+
+    display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-gap: 1vh;	
+}
+
+.cell{
+	
+    border: 1px solid #DCDCDC;
+	background: linear-gradient(to right, #FFFF00, #FFA07A);
+	border-radius: 10px;	
+	font-size: 3vw;
+	font-weight: 700;
+}
+
+#cell40 {
+	border: 2px solid yellow;
+	border-radius: 10px;
+	background: transparent;
+    display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+ #btn {
+           width: 50px;
+           height: 50px;  
+		   border-bottom: 10px solid red;
+           border-right: 10px solid red;
+           border-left-color: transparent;
+           border-top-color: transparent;
+           
+}
+           
+ body:fullscreen  #btn{
+           border-bottom-color: transparent;
+           border-right-color: transparent;
+           border-left: 10px solid red;
+           border-top: 10px solid red;
+        
+}
+
+
+
+@media (orientation: portrait) {
+	#conteyner{ width: 95vw; height: auto;}
+    #alphabet {width: 90vw; height: 92vh; margin-top: 1vh;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(8, 1fr);}
+	.cell{ font-size: 6vw;	}
+	.lang { font-weight: 700; font-size: 4vw;}
+}
+
+/*============================*/
+
+#fieldTwo {
+	background: transparent;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#letter { width: 90%; 
+        height: 100%;	
+		border: 1px solid transparent;	
+        display: grid;		
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);	}
+		
+    #letter > * { margin: 3px;}
+
+#flag {
+	  border: 3px solid blue;
+	  border-radius: 15px;
+	  grid-row: 1/5;    
+      grid-column-start: 1;	
+	     display: grid;
+		 grid-template-columns:1fr;
+	     grid-template-rows: 1fr 1fr 1fr 1fr;
+		 grid-row-gap: 2vh;
+		 justify-content: stretch;
+		 align-items: stretch;
+}
+
+#keypad {
+	  grid-row: 1/5;    
+      grid-column-start: 6;	
+	     display: grid;
+		 grid-template-columns:1fr;
+	     grid-template-rows: 1fr 1fr 1fr 1fr;
+		 grid-row-gap: 2vh;
+		 justify-content: stretch;
+		 align-items: stretch;
+}
+
+.key, .room {
+	  background: #E6E6FA;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+}
+
+.key {border: 3px solid transparent;
+      border-radius: 15px;}
+	  
+.room {
+	  background: transparent;
+}	  
+
+.fond {width: 80%; height: 80%;}
+.toAlphabet {font-size: 3vw; color: red;} 
+.toAlphabet1 {font-size: 3vw; color: red;} 
+
+#say {
+	  grid-column: 2/6;    
+      grid-row: 1/2;
+}
+
+#pic {
+	 grid-column: 2/6;    
+     grid-row: 2/5;
+}
+
+#pic IMG {
+   width: auto;
+   max-height: 65%;
+   border-radius : 5vw; 
+   object-fit: contain;
+   position: absolute;	
+}
+
+#say, #pic {
+      display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  border: 1px solid transparent;
+}
+
+#say { color: #BA55D3; font-size: 7vw;}
+
+#say b { color: red; }
+
+/*===================================*/
+
+@media (orientation: portrait) {
+	
+#letter { width: 90%; 
+        height: 98%;	
+        display: grid;		
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);	
+}
+
+
+#flag {
+	  grid-row: 1;    
+      grid-column: 1/5;	
+	     grid-template-rows:1fr;
+	     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#keypad {
+	  grid-row: 6;    
+      grid-column: 1/5;
+         grid-template-rows:1fr;
+	     grid-template-columns: 1fr 1fr 1fr 1fr;	  
+}
+
+.toAlphabet, .toAlphabet1  {font-size: 5vw;} 
+
+#say {
+      font-size: 14vw;  
+	  grid-column:1/5;    
+      grid-row: 2/3;
+}
+
+#pic {
+	 
+	 grid-column: 1/5;    
+     grid-row: 3/6;
+}
+
+#pic IMG { max-width: 85%; height: auto;}
+}
